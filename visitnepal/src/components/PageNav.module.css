@@ -1,9 +1,13 @@
 .nav {
-    background-color: rebeccapurple;
+    background-color: rgb(153, 153, 51);
 }
 
 .nav ul{
     display: flex;
     justify-content: space-between;
     list-style: none;
+}
+
+.nav :global(.active){
+    background-color: aqua;
 }
