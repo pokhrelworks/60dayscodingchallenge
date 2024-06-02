@@ -5,7 +5,7 @@ import PageNav from "../components/PageNav";
 
 export default function Login() {
   // PRE-FILL FOR DEV PURPOSES
-  const [email, setEmail] = useState("jack@example.com");
+  const [email, setEmail] = useState("example.com");
   const [password, setPassword] = useState("qwerty");
 
   return (
