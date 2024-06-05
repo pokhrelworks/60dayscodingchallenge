@@ -108,7 +108,6 @@ function Results() {
 }
 
 function Main() {
-  const { posts, onAddPost } = useContext(PostContext)
   return (
     <main>
       <FormAddPost/>
@@ -118,10 +117,9 @@ function Main() {
 }
 
 function Posts() {
-  const { posts } = useContext(PostContext)
   return (
     <section>
-      <List posts={posts} />
+      <List/>
     </section>
   );
 }
@@ -156,7 +154,8 @@ function FormAddPost() {
   );
 }
 
-function List({ posts }) {
+function List() {
+  const {posts} = useContext(PostContext)
   return (
     <ul>
       {posts.map((post, i) => (
