@@ -1,40 +1,64 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "cityName": "Solukhumbu",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-06-07T14:30:00.000Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 27.699194,
+        "lng": 86.741584
       },
-      "id": 17806751
+      "id": "9921"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "cityName": "Lumbini",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-06-07T14:31:00.000Z",
+      "notes": "Birthplace of Buddha",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": 27.483784,
+        "lng": 83.274508
       },
-      "id": 98443197
+      "id": "9922"
+    },
+    {
+      "cityName": "Pokhara",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-06-07T14:32:00.000Z",
+      "notes": "Beautiful lakes and mountains",
+      "position": {
+        "lat": 28.209583,
+        "lng": 83.985587
+      },
+      "id": "9923"
+    },
+    {
+      "cityName": "Ilam",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-06-07T14:33:00.000Z",
+      "notes": "Famous for tea gardens",
+      "position": {
+        "lat": 26.909921,
+        "lng": 87.926214
+      },
+      "id": "9924"
+    },
+    {
+      "cityName": "Dang",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-06-07T14:34:00.000Z",
+      "notes": "",
+      "position": {
+        "lat": 28.041945,
+        "lng": 82.288557
+      },
+      "id": "9925"
     }
   ]
 }

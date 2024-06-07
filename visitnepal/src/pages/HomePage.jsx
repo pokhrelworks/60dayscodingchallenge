@@ -1,23 +1,26 @@
 import { Link } from "react-router-dom";
-import PageNav from "../components/PageNav"
+import PageNav from "../components/PageNav";
 import styles from "./Homepage.module.css";
 
 export default function Homepage() {
   return (
     <main className={styles.homepage}>
-      <PageNav/>
+      <PageNav />
+
       <section>
         <h1>
-          You travel around Nepal.
+          You travel the world.
           <br />
-          Visit Nepal keeps track of your adventures.
+          WorldWise keeps track of your adventures.
         </h1>
         <h2>
-          A web app that tracks your footsteps into every city you can think
+          A world map that tracks your footsteps into every city you can think
           of. Never forget your wonderful experiences, and show your friends how
           you have wandered the world.
         </h2>
-        <Link to="/app" className="cta">Let&apos;s Explore</Link>
+        <Link to="/login" className="cta">
+          Start tracking now
+        </Link>
       </section>
     </main>
   );
