@@ -12,12 +12,10 @@ export default function Product() {
           <h2>
             Simple pricing.
             <br />
-            Just $9/month.
+            Just Rs 500/month.
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
-            labore mollitia iusto. Recusandae quos provident, laboriosam fugit
-            voluptatem iste.
+          Discover Nepal without breaking the bank with Visit Nepal's budget-friendly pricing. Our transparent pricing structure ensures you know exactly what you're paying for, with no hidden fees. Choose from a range of customizable packages tailored to suit your preferences and budget, and embark on an unforgettable journey through the breathtaking landscapes and rich culture of Nepal.
           </p>
         </div>
         <img src="img-2.jpg" alt="overview of a large city with skyscrapers" />
