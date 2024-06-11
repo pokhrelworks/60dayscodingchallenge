@@ -71,6 +71,18 @@
         "lng": "85.330810546875"
       },
       "id": "Dqzbxdr"
+    },
+    {
+      "cityName": "Apihimal",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2024-06-11T16:28:55.772Z",
+      "notes": "",
+      "position": {
+        "lat": "29.936895741539793",
+        "lng": "81.00088116023399"
+      },
+      "id": "tmjQwwa"
     }
   ]
 }

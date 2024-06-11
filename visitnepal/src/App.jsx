@@ -33,6 +33,7 @@ function App() {
     <AuthProvider>
       <CitiesProvider>
         <BrowserRouter>
+        {/* Suspense to show loader when needed */}
           <Suspense fallback={<SpinnerFullPage />}>
             <Routes>
               <Route index element={<Homepage />} />
