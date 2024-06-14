@@ -31,7 +31,7 @@ function Calculator({ workouts, allowSound }) {
       };
       playSound();
     },
-    [duration,allowSound]
+    [duration, allowSound]
   );
 
   const mins = Math.floor(duration);

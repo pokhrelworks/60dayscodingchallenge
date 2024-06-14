@@ -5,7 +5,7 @@ function createRandomPost() {
   return {
     title: `${faker.hacker.adjective()} ${faker.hacker.noun()}`,
     body: faker.hacker.phrase(),
-  };
+  }; 
 }
 //1. Create a new context.
 const PostContext = createContext();
