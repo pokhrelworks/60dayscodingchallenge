@@ -2,12 +2,17 @@ const initialStateAccount = {
   balance: 0,
   loan: 0,
   loanPurpose: "",
+  isLoading: false,
 };
 
 export default function accountReducer(state = initialStateAccount, action) {
   switch (action.type) {
     case "account/deposit":
-      return { ...state, balance: state.balance + action.payload };
+      return {
+        ...state,
+        balance: state.balance + action.payload,
+        isLoading: false,
+      };
     case "account/withdraw":
       return { ...state, balance: state.balance - action.payload };
     case "account/requestLoan":
@@ -17,6 +22,11 @@ export default function accountReducer(state = initialStateAccount, action) {
         loan: action.payload.amount,
         loanPurpose: action.payload.purpose,
         balance: state.balance + action.payload.amount,
+      };
+    case "account/convertingCurrency":
+      return {
+        ...state,
+        isLoading: true,
       };
     case "account/payLoan":
       return {
@@ -35,6 +45,7 @@ export function deposit(amount, currency) {
   //The react now will knows that this is an asynchronous action so it will hold that function
   return async function (dispatch, getState) {
     //API Call
+    dispatch({ type: "account/convertingCurrency" });
     const res = await fetch(
       `https://api.frankfurter.app/latest?amount=${amount}&from=${currency}&to=USD`
     );

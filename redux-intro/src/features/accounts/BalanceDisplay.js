@@ -15,4 +15,5 @@ function mapStateToProps(state) {
     balance: state.account.balance,
   };
 }
+//Exported
 export default connect(mapStateToProps)(BalanceDisplay);
