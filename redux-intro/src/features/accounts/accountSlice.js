@@ -30,21 +30,34 @@ export default function accountReducer(state = initialStateAccount, action) {
   }
 }
 
-export function deposit(amount) {
-    return { type: "account/deposit", payload: amount };
-  }
-  
-  export function withdraw(amount) {
-    return { type: "account/withdraw", payload: amount };
-  }
-  
-  export function requestLoan(amount, purpose) {
-    return {
-      type: "account/requestLoan",
-      payload: { amount, purpose },
-    };
-  }
-  
-  export function payLoan() {
-    return { type: "account/payLoan" };
-  }
+export function deposit(amount, currency) {
+  if (currency === "USD") return { type: "account/deposit", payload: amount };
+  //The react now will knows that this is an asynchronous action so it will hold that function
+  return async function (dispatch, getState) {
+    //API Call
+    const res = await fetch(
+      `https://api.frankfurter.app/latest?amount=${amount}&from=${currency}&to=USD`
+    );
+
+    const data = await res.json();
+    const converted = data.rates.USD;
+    dispatch({ type: "account/deposite", payload: converted });
+    // console.log(data);
+    //return dispatch()
+  };
+}
+
+export function withdraw(amount) {
+  return { type: "account/withdraw", payload: amount };
+}
+
+export function requestLoan(amount, purpose) {
+  return {
+    type: "account/requestLoan",
+    payload: { amount, purpose },
+  };
+}
+
+export function payLoan() {
+  return { type: "account/payLoan" };
+}
