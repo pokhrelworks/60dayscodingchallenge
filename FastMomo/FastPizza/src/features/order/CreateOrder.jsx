@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Form } from "react-router-dom";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -38,7 +39,9 @@ function CreateOrder() {
     <div>
       <h2>Ready to order? Let's go!</h2>
 
-      <form>
+      {/* <Form method="POST" action="/order/new"> */}
+      <Form method="POST" >
+
         <div>
           <label>First Name</label>
           <input type="text" name="customer" required />
@@ -72,9 +75,17 @@ function CreateOrder() {
         <div>
           <button>Order now</button>
         </div>
-      </form>
+      </Form>
     </div>
   );
 }
+
+//whenever the form is submitted then the react router will call this function
+export  async function action({request}) {
+  const formData = await request.formData();
+  console.log(formData);
+  return null;
+}
+
 
 export default CreateOrder;
