@@ -4,7 +4,7 @@ import { Form } from "react-router-dom";
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
-    str
+    str,
   );
 
 const fakeCart = [
@@ -40,24 +40,23 @@ function CreateOrder() {
       <h2>Ready to order? Let's go!</h2>
 
       {/* <Form method="POST" action="/order/new"> */}
-      <Form method="POST" >
-
+      <Form method="POST">
         <div>
           <label>First Name</label>
-          <input type="text" name="customer" required />
+          <input className="input" type="text" name="customer" required />
         </div>
 
         <div>
           <label>Phone number</label>
           <div>
-            <input type="tel" name="phone" required />
+            <input className="input" type="tel" name="phone" required />
           </div>
         </div>
 
         <div>
           <label>Address</label>
           <div>
-            <input type="text" name="address" required />
+            <input className="input" type="text" name="address" required />
           </div>
         </div>
 
@@ -66,6 +65,7 @@ function CreateOrder() {
             type="checkbox"
             name="priority"
             id="priority"
+            className="h-6 w-6 accent-yellow-400 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2"
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
@@ -73,7 +73,12 @@ function CreateOrder() {
         </div>
 
         <div>
-          <button>Order now</button>
+          <button
+            disabled={true}
+            className="disabled: cursor-not-allowed rounded-full bg-yellow-400 px-4 py-3 font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2"
+          >
+            Order now
+          </button>
         </div>
       </Form>
     </div>
@@ -81,11 +86,10 @@ function CreateOrder() {
 }
 
 //whenever the form is submitted then the react router will call this function
-export  async function action({request}) {
+export async function action({ request }) {
   const formData = await request.formData();
   console.log(formData);
   return null;
 }
-
 
 export default CreateOrder;

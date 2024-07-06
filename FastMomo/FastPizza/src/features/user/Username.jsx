@@ -1,9 +1,5 @@
 function Username() {
-    return (
-        <div className="text-sm font-semibold hidden">
-            Ankit
-        </div>
-    )
+  return <div className="hidden font-semibold *:text-sm md:block">Ankit</div>;
 }
 
-export default Username
+export default Username;

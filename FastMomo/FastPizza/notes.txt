@@ -12,3 +12,7 @@ Tailwind is the utility first CSS framework that uses 100 of classes to style so
 
 The Box Model
 
+Responsive
+- If we include the breakpoint as sm then when that breakpoint hit then only all of those design will be shown below that it won't show and above that it will show.
+- You can always customize width of your Responsive from Tailwind config check out it in documentation.
+
