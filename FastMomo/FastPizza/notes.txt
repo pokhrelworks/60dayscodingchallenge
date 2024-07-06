@@ -1,0 +1,14 @@
+Tailwind is the utility first CSS framework that uses 100 of classes to style so we don't need to write any new thing.
+
+- You write class name and that's all is what you need to do. 
+- You can easily integrate this to VSC so that it will auto complete your classes names.
+- But you might write spagatti code with hell lot of classes so remembering them all would be    hard but you will get in with some practice.
+-You won't need to write all those CSS hurray!
+
+
+- You need to setup tailwind for each project. Follow the documentation
+
+
+
+The Box Model
+
