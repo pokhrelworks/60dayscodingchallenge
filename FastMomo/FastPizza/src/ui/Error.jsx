@@ -1,7 +1,8 @@
-import { useNavigate, useRouteError } from 'react-router-dom';
+import {useRouteError } from "react-router-dom";
+import LinkButton from "./LinkButton";
 
 function NotFound() {
-  const navigate = useNavigate();
+
   //useRouteError is a hook that returns the error object of the current route. It is used to get the error message.
   const error = useRouteError();
 
@@ -9,7 +10,8 @@ function NotFound() {
     <div>
       <h1>Something went wrong 😢</h1>
       <p>{error.data || error.message}</p>
-      <button onClick={() => navigate(-1)}>&larr; Go back</button>
+      <LinkButton to="-1">&larr; Go back</LinkButton>
+    
     </div>
   );
 }

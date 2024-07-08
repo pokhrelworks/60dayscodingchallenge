@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import Button from "../../ui/Button";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
@@ -36,31 +37,36 @@ function CreateOrder() {
   const cart = fakeCart;
 
   return (
-    <div>
-      <h2>Ready to order? Let's go!</h2>
+    <div className="px-4 py-6">
+      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let's go!</h2>
 
       {/* <Form method="POST" action="/order/new"> */}
       <Form method="POST">
-        <div>
-          <label>First Name</label>
-          <input className="input" type="text" name="customer" required />
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
+          <label className="sm:basis-40">First Name</label>
+          <input className="input grow" type="text" name="customer" required />
         </div>
 
-        <div>
-          <label>Phone number</label>
-          <div>
-            <input className="input" type="tel" name="phone" required />
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
+          <label className="sm:basis-40">Phone number</label>
+          <div className="grow">
+            <input className="input w-full" type="tel" name="phone" required />
           </div>
         </div>
 
-        <div>
-          <label>Address</label>
-          <div>
-            <input className="input" type="text" name="address" required />
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
+          <label className="sm:basis-40">Address</label>
+          <div className="grow">
+            <input
+              className="input w-full"
+              type="text"
+              name="address"
+              required
+            />
           </div>
         </div>
 
-        <div>
+        <div className="mb-12 flex items-center gap-5">
           <input
             type="checkbox"
             name="priority"
@@ -69,16 +75,11 @@ function CreateOrder() {
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority">Want to yo give your order priority?</label>
+          <label  className="font-medium" htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
-          <button
-            disabled={true}
-            className="disabled: cursor-not-allowed rounded-full bg-yellow-400 px-4 py-3 font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2"
-          >
-            Order now
-          </button>
+          <Button type="primary">Order now</Button>
         </div>
       </Form>
     </div>
