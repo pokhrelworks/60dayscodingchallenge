@@ -7,11 +7,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Switch,
 } from "@mui/material";
 import React from "react";
-import ModeNight from "@mui/icons-material/ModeNight";
-
 import QuestionAnswerSharp from "@mui/icons-material/QuestionAnswerSharp";
 import PeopleOutline from "@mui/icons-material/PeopleOutline";
 import SettingsBackupRestore from "@mui/icons-material/SettingsBackupRestore";
@@ -92,14 +89,6 @@ function Sidebar() {
                 </Badge>
               </ListItemIcon>
               <ListItemText primary="Reel'ationship" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#messenger">
-              <ListItemIcon>
-                <ModeNight />
-              </ListItemIcon>
-              <Switch />
             </ListItemButton>
           </ListItem>
         </List>

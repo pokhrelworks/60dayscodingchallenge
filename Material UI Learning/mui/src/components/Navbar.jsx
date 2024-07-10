@@ -14,6 +14,7 @@ import React, { useState } from "react";
 import EmojiEmotionsSharp from "@mui/icons-material/EmojiEmotionsSharp";
 import QuestionAnswerSharp from "@mui/icons-material/QuestionAnswerSharp";
 import Notifications from "@mui/icons-material/Notifications";
+import { ModeNight } from "@mui/icons-material";
 
 const StyledToolBar = styled(Toolbar)({
   display: "flex",
@@ -45,7 +46,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-function Navbar() {
+function Navbar({ setMode, mode }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -59,9 +60,15 @@ function Navbar() {
           <InputBase placeholder="search..."></InputBase>
         </Search>
         <Icons>
+          <ModeNight
+            onClick={() => {
+              mode === "light" ? setMode("dark") : setMode("light");
+            }}
+          />
           <Badge badgeContent={4} color="error">
             <QuestionAnswerSharp />
           </Badge>
+
           <Badge badgeContent={4} color="error">
             <Notifications />
           </Badge>
