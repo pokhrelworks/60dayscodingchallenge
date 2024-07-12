@@ -1,0 +1,54 @@
+JavaScript scope is limited to Browser only. It could not access any operating system related problems and no network related problems so then node rises to remove this problem.
+
+NodeJs:
+It is neither framework nor programming language but it is just a runtime engine or enviroment. It makes our JS code run in backend or outside the web Browser. It runs in V8 engine. 
+
+What actually is engine ? 
+Engine is something that is inbuild in Browser whose main work is to render JS code into browser.
+It paints those CSS, HTML or JS into browser so we don't need to download anything extra for the same purpose. 
+
+Now with this we now have capabilities to run JavaScript outside the browser and do 
+
+To get the value of Java which was too much of hype back then JavaScript name was given.
+
+NodeJs:
+NodeJs is an open-source, cross-platform backend JavaScript runtime environment that runs on the V8 engine and execute JavaScript code outside a web browser.
+
+- Written in C,C++ and JavaScript.
+
+New NodeJs : Deno
+Deno is also runtime based on V8 JavaScript engine and the Rust programming language.(Same developer as NodeJs).
+Came with inbuild features and is more effective then NodeJs.
+
+NodeJs:(Terms)
+Non-Blocking: Can parallely run two different tasks. 
+
+nvm - (Node version manager) is used to work with different version of node.
+Here you can install the required version and use that accrd to your compatibility.
+There are so much command you can learn and use according to you convinence by typing "nvm".
+
+Package Managers: 
+They are the tools or software or program which are used for installing, upgrading, configuring or removing computer program. 
+e.g.  mac: homebrew
+
+We have package managers for different programming language and they are called libraries/plugin so that others work can be imported and do our tasks. 
+
+Eg:
+Python: pip, anaconda
+php: Composer
+JS: npm(node package manager), yarn, pnpm(cross betweeen npm and yarn)
+
+
+Term: (REPL) --Read Eval Print Loop
+It is a programming language enviroment that takes single expression and give result. Basically gave output when executing some small code like we did in python and other thing.
+
+
+
+
+
+
+
+
+
+
+
