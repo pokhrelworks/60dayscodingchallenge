@@ -42,10 +42,33 @@ JS: npm(node package manager), yarn, pnpm(cross betweeen npm and yarn)
 Term: (REPL) --Read Eval Print Loop
 It is a programming language enviroment that takes single expression and give result. Basically gave output when executing some small code like we did in python and other thing.
 
+--- npm init to initialize node.
+
+Global identifiers: 
+Globally accessable functions, objects and stuff like console.log, alert and others.
+
+For NodeJS: console.log, global(namespace to make variable globally available)
+
+process:
+Every detail about how, where the process is running is defined inside process object. We maximum use this process object to work with so remember this before hand.
 
 
 
+Global Identifiers: 
 
+__filename:
+gives the name of the current file
+
+_dirname:
+gives the current directory
+
+These commands are used to store data or something inside these files.
+
+require(): (same as import)
+This is used to import files that we use.
+
+module: (module.export) --(same as export)
+This object is same as import that we are doing in React. 
 
 
 

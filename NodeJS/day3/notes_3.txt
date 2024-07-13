@@ -1,0 +1,26 @@
+Concept of Module System: 
+
+We can reuse code once written using module. To decrease we divide code into managable pieces and import them according to our convinence.
+
+We have two module System:
+1) Common JS (module, exports, require)
+2) EcmaScript (import, export, default, export)  -- latest (Prefer this!!!)
+
+You can find both used in NodeJS
+
+
+Common JS: This module is used by node Js so when we try to use EcmaScript it won't know so it will give us error so to prevent that we should rename our file from .js to .mjs.
+
+It would be headtick to give all the file name as .mjs so we can dirct specify that we are using module in package.json inside type.
+
+You need to import EcmaScript at the top level only. It load modules asynchronously and it is fast. 
+
+You need to parse Common Js into ES6 module using Babel.
+
+These are inbuilt so no need to export anything.
+Some of Inbuilt Modules:
+File System(fs)-- working with file
+URL -- work with URL
+HTTP -- to establish HTTP Server
+Crypto
+Internatinalization - Language 
