@@ -1,0 +1,8 @@
+API testing software:
+Postman, Insomnia, Thunder CLient etc
+We need to test POST request with these software.
+
+We are using Thunder Client. It is light weight and inbuilt in VSC so...
+
+Thunder Client:
+So with this we can test, try and debug our http methods request. You can even test how form data are tranported from front end using this.
