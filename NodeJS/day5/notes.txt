@@ -1,0 +1,43 @@
+PS: Remmeber to start nodemon to ease your work. 
+
+Express JS:
+It is a framework to handle backend. We were doing http things with just NodeJS which was lengthy and hard so ease our work we should use framework i.e. ExpressJS
+
+Replacement of http module but under the hood it is using the same(http). 
+
+So much each with express js to handle http request. 
+
+So we now know how to get params and query response form GET method also how to create end-points and store all the similar endpoints in a single place i.e usign express.Router.
+
+Also POST method doesnot store data in URL so we use req.body i.e. in get we used to use req.params/query to get the data. #peace
+
+API's :
+API(Application programming interface) is a medium that enables between communication between two bodies.
+Not limited to Web API has a board concept. It can be used in Operating systems and all those things where we need to communicate. 
+
+We need not to know how things actually work but if we got API of that thing we can use it functionality. 
+
+We use Web API. Any Api's made for web is this. We actually made route so that front end use that route and communicate with backend mainly json files can be accessed. 
+
+Json is just a random file format, we can use anything. 
+
+To summarize, API creates endpoint so that data can be send from server to front end easy pizy. 
+
+
+API's Types:
+
+1)SOAP (Simple Object Access Protocol)
+2)REST (Representational State Transfer)
+3)Others like graphql, gRPC, etc.
+
+
+REST allows sending data in any format unlike SOAP, which only allows sending XML format. REST internally use HTTP methods to access data. SOAP mainly secures data and is used in payment apps like Paypal but in a way it is deprecated. 
+
+REST is just an architecture/rule that uses HTTP protocol. It is so popular nowadays that we started to call web APIs Restful APIs. So, now you know why RESTAPI was buzzing to your ear.
+
+In summary, REST has become very popular due to its simplicity and flexibility, which is why many modern web APIs are called RESTful APIs. SOAP, while not as commonly used for new services, is still relevant in certain contexts where its features are necessary.
+
+
+
+
+
