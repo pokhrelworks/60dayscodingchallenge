@@ -1,0 +1,74 @@
+IP Address:
+Unique address to that identifies a device onn the internet or local network. IPV4 and IPV6 just to increase the numbers of combination for more IP Address. Domain name just to point IP Address so that we don't remember all those IP's.
+
+Port:
+Network ko kun end batw data line tw vnyarw define grne thau. Values ranges from 0 to 65535. Like windows, door, chimmney etc.
+Different protocols access grna different port haru hunxan as if we need to send mail then we have port 25 to access SMTP. 
+Google for more information about ports.
+
+Socket:
+End point ma basyarw data guard grne. Like Security guard sitting beside door.7
+
+Protocols:
+Rule that governs the data communication in the network.
+_________________________________________________________________________________________________
+How to communicate?
+Request:
+Server lai request grne.
+
+Response:
+Data which are transfered by the server to the client.
+
+Headers:
+Extra information to request, for more detail.
+
+Status Code:
+2xx - Success
+3xx - Redirection   
+4xx - Client Error
+5xx - Server Error
+__________________________________________________________________________________
+Different Types of HTTP Methods:
+
+GET
+The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+
+HEAD
+The HEAD method asks for a response identical to a GET request, but without the response body.
+
+POST
+The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.
+
+PUT
+The PUT method replaces all current representations of the target resource with the request payload.
+
+DELETE
+The DELETE method deletes the specified resource.
+
+CONNECT
+The CONNECT method establishes a tunnel to the server identified by the target resource.
+
+OPTIONS
+The OPTIONS method describes the communication options for the target resource.
+
+TRACE
+The TRACE method performs a message loop-back test along the path to the target resource.
+
+PATCH
+The PATCH method applies partial modifications to a resource.
+
+____________________________________________________________________________________________________________
+Some Libraries:
+
+nodemon:
+This thing will reload your server at local host if it finds any changes in the code. Very helful 
+
+chalk: 
+Random library to just display cool colors in terminal.
+
+Kill Port:
+You can terminate any port by using:
+kill-port port_name
+
+winston:
+To store log, will generate log file and store every details in local file. 
