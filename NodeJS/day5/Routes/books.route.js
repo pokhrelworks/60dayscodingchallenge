@@ -1,8 +1,13 @@
 //This is the route file to access the books end url like /books, /books/:id, /books/:id/:author
 import express from "express";
+import validateToken from "../Middlewares/validateToken.js";
 
 //express.Router() is a function that returns an instance of a router. We can add routes to this router and then export it.
 const router = express.Router();
+
+router.use((req, res, next) => {
+  validateToken(req, res, next);
+});
 
 router.get("/", (req, res) => {
   res.status(200).send("Books data");

@@ -37,6 +37,16 @@ REST is just an architecture/rule that uses HTTP protocol. It is so popular nowa
 
 In summary, REST has become very popular due to its simplicity and flexibility, which is why many modern web APIs are called RESTful APIs. SOAP, while not as commonly used for new services, is still relevant in certain contexts where its features are necessary.
 
+Middlewares:
+The methods/functions that are called between processing the Request and sending the Response is called middlewares.
+
+PS: For industry standard usage of middlewares you can use same middleware function to different routes or different types of middlewares to same routes as an object which will check different types of middle wares before accessing that particular route.
+
+Types/Level:
+1) Application level middlewares
+2) Router Level Middlewares
+3) Inbuild middlewares
+4) Third party middlewares (e.g express rate limit)
 
 
 

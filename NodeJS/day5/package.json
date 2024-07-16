@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
     "kill-port": "^2.0.1",
     "nodemon": "^3.1.4"
   }
