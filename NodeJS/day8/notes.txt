@@ -1,0 +1,3 @@
+Now we download mysql server in our device to store data in tabular form.
+
+Prepared Statements to secure data, avoid SQL injection, caches to store same data, type checking also
