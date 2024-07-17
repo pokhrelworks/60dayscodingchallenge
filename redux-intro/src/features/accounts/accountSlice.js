@@ -8,7 +8,7 @@ const initialState = {
   loanPurpose: "",
   isLoading: false,
 };
-const accountSlice =  createSlice({
+const accountSlice = createSlice({
   name: "account",
   initialState,
   reducers: {
@@ -19,23 +19,55 @@ const accountSlice =  createSlice({
     withdraw(state, action) {
       state.balance -= action.payload;
     },
-    requestLoan(state, action) {
-      if (state.loan > 0) return;
-      state.loan = action.payload.amount;
-      state.loanPurpose = action.payload.purpose;
-      state.balance += action.payload.amount;
+
+    requestLoan: {
+      prepare(amount, purpose) {
+        return { payload: { amount, purpose } };
+      },
+      reducer(state, action) {
+        if (state.loan > 0) return;
+        state.loan = action.payload.amount;
+        state.loanPurpose = action.payload.purpose;
+        state.balance += action.payload.amount;
+      },
     },
     convertingCurrency(state) {
       state.isLoading = true;
     },
     payLoan(state) {
+      state.balance -= state.loan;
       state.loan = 0;
       state.loanPurpose = "";
-      state.balance -= state.loan;
     },
   },
 });
 
+//Thunks is already inside the redux toolkit.
+export function deposit(amount, currency) {
+  if (currency === "USD") return { type: "account/deposit", payload: amount };
+  //The react now will knows that this is an asynchronous action so it will hold that function
+  return async function (dispatch, getState) {
+    //API Call
+    dispatch({ type: "account/convertingCurrency" });
+    const res = await fetch(
+      `https://api.frankfurter.app/latest?amount=${amount}&from=${currency}&to=USD`
+    );
+
+    const data = await res.json();
+    const converted = data.rates.USD;
+    dispatch({ type: "account/deposite", payload: converted });
+    // console.log(data);
+    //return dispatch()
+  };
+}
+
+
+
+
+export const {withdraw, requestLoan, convertingCurrency, payLoan } =
+accountSlice.actions;
+export default accountSlice.reducer;
+// console.log(accountSlice);
 // export default function accountReducer(state = initialStateAccount, action) {
 //   switch (action.type) {
 //     case "account/deposit":

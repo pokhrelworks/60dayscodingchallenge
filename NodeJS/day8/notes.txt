@@ -1,3 +1,7 @@
 Now we download mysql server in our device to store data in tabular form.
 
-Prepared Statements to secure data, avoid SQL injection, caches to store same data, type checking also
+Operated CRUD operation with SQL nodejs package.
+
+Prepared Statements to secure data, avoid SQL injection, caches to store same data, type checking also.
+
+We can use promises too in SQL2. Just asynchronous handeling not so much of rocket science.

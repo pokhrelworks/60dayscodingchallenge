@@ -1,0 +1,24 @@
+Database:
+Organised collection of structured information. 
+
+DBMS:
+It is a software that manages, organised and controls our database. 
+E.g. MySQL
+
+To communicate with the database we use query language named as structured query language. (SQL)
+
+C.R.U.D Operation in Database: 
+create read update delete 
+
+Commonly used DB Schema 
+1) Table (SQL/Relational)
+2) JSON (NoSQL/Non-Relational)
+
+We use the concept of keys to show Association Mechanism in Relational Database.
+
+We need drivers to communicate with our webapp and database so that we can do our work with database using our code.
+
+ORM is the library written in langauge of our choice that encapsulate code needed to manipulate the data directly with the langauge we are using. 
+
+JS ORM: Mongoose for javascript!
+
